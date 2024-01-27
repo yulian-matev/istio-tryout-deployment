@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx-svc
-        image: ymatev/micro-svc-nginx:59-1.1-590d71
+        image: ymatev/micro-svc-nginx:60-1.1-4cbd4f
         resources:
           limits:
             cpu: "0.5"
@@ -28,7 +28,7 @@ spec:
           containerPort: 80
           protocol: TCP
       - name: php-svc
-        image: ymatev/micro-svc-php:59-1.1-590d71
+        image: ymatev/micro-svc-php:60-1.1-4cbd4f
         env:
           - name: SERVICE_NAME
             valueFrom:
