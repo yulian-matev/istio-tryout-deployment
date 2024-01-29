@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx-svc
-        image: ymatev/micro-svc-nginx:15-1.1.17-4d142d
+        image: ymatev/micro-svc-nginx:16-1.1.18-c1acb0
         resources:
           limits:
             cpu: "0.5"
@@ -28,7 +28,7 @@ spec:
           containerPort: 80
           protocol: TCP
       - name: php-svc
-        image: ymatev/micro-svc-php:15-1.1.17-4d142d
+        image: ymatev/micro-svc-php:16-1.1.18-c1acb0
         env:
           - name: SERVICE_NAME
             valueFrom:
@@ -40,6 +40,11 @@ spec:
               configMapKeyRef:
                 name: devops-blue-configmap
                 key: microservice.version.long
+          - name: SERVICE_RELEASE_DATE
+            valueFrom:
+              configMapKeyRef:
+                name: devops-blue-configmap
+                key: microservice.release.date
         resources:
           limits:
             cpu: "0.5"
