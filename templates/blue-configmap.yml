@@ -5,5 +5,5 @@ metadata:
 immutable: false    # optional, if set to true then data cannot be changed later
 data:
   microservice.name: "blue"                                     # key-value 1
-  microservice.version.long: "16-1.1.18-c1acb0"                          # key-value 2
-  microservice.release.date: ""
+  microservice.version.long: "17-1.1.18-abd742"                          # key-value 2
+  microservice.release.date: "2024-01-30 06:31:10"
